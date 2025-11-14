@@ -1,0 +1,28 @@
+{
+  "comment": "Configuration for Kinect Cymatics Sound Generator",
+
+  "min_distance": 0.5,
+  "max_distance": 4.0,
+  "comment_distance": "Distance range in meters. Closer distance produces higher frequency.",
+
+  "min_freq": 100.0,
+  "max_freq": 1000.0,
+  "comment_freq": "Frequency range in Hz. Good cymatics patterns typically form between 100-2000 Hz.",
+
+  "max_speed": 2.0,
+  "comment_speed": "Maximum speed in m/s for amplitude mapping.",
+
+  "min_amplitude": 0.1,
+  "max_amplitude": 0.8,
+  "comment_amplitude": "Amplitude range (0.0-1.0). Higher values = louder sound = more pronounced patterns.",
+
+  "wave_type": "sine",
+  "comment_wave_type": "Wave type: 'sine', 'square', 'triangle', or 'sawtooth'. Sine produces cleanest cymatics patterns.",
+
+  "use_amplitude_modulation": true,
+  "comment_am": "Enable amplitude modulation based on movement speed for dynamic patterns.",
+
+  "use_frequency_modulation": false,
+  "fm_depth": 50.0,
+  "comment_fm": "Enable frequency modulation. FM depth in Hz determines modulation intensity."
+}
