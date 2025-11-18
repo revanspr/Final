@@ -112,12 +112,13 @@ class WebcamCymaticsGenerator:
         """Get the tracked person's position from webcam frame"""
         gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 
-        # Detect faces
+        # Detect faces (more sensitive settings)
         faces = self.face_cascade.detectMultiScale(
             gray,
-            scaleFactor=1.1,
-            minNeighbors=5,
-            minSize=(30, 30)
+            scaleFactor=1.05,
+            minNeighbors=3,
+            minSize=(20, 20),
+            flags=cv2.CASCADE_SCALE_IMAGE
         )
 
         if len(faces) > 0:
@@ -154,12 +155,12 @@ class WebcamCymaticsGenerator:
 
             if self.calibration_count == self.calibration_frames:
                 self.baseline_face_size = np.median(self.calibration_sizes)
-                print(f"✓ Calibration complete!")
+                print(f"[OK] Calibration complete!")
                 print(f"  Baseline face size: {self.baseline_face_size:.6f}\n")
                 print("NOW ACTIVE - Move around to create sounds!")
-                print("  • Move closer/farther to change FREQUENCY")
-                print("  • Move around to change AMPLITUDE")
-                print("  • Press 'q' to quit\n")
+                print("  - Move closer/farther to change FREQUENCY")
+                print("  - Move around to change AMPLITUDE")
+                print("  - Press 'q' to quit\n")
                 print("=" * 60)
 
             return False
