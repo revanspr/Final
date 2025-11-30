@@ -1,28 +1,7 @@
 {
   "permissions": {
     "allow": [
-      "Bash(node --version:*)",
-      "Bash(npx http-server -p 8080)",
-      "Bash(git config:*)",
-      "Bash(gh:*)",
-      "Bash(brew install:*)",
-      "Bash(git commit:*)",
-      "Bash(git push)",
-      "Bash(git clone:*)",
-      "Read(//c/Users/revan/midterm-questions-only/**)",
-      "Bash(cat:*)",
-      "Bash(git rm:*)",
-      "Bash(rm:*)",
-      "Bash(git add:*)",
-      "Bash(ls:*)",
-      "Bash(timeout 3 bash:*)",
-      "Bash(mv:*)",
-      "Bash(for level in d1 d2 d3 d4 d5 d6)",
-      "Bash(do echo -n \"$level: \")",
-      "Bash(done)",
-      "Bash(mkdir:*)",
-      "Bash(python:*)",
-      "Bash(pip install:*)"
+      "Bash(git clone:*)"
     ],
     "deny": [],
     "ask": []
